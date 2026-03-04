@@ -8,31 +8,31 @@ Make sure you read through and understand the challenge, then work through your 
 
 ## Getting Started
 
-- [ ] Fork and clone this repository. If you need a refresher, just follow the instructions found [here](https://github.com/CodesmithLLC/dev-environment-setup/blob/main/fork-clone.md)!
+- [X] Fork and clone this repository. If you need a refresher, just follow the instructions found [here](https://github.com/CodesmithLLC/dev-environment-setup/blob/main/fork-clone.md)!
 
 Next, follow these steps in order to link the cloned repository in your local dev environment with the original repository on CodesmithLLC's GitHub.
 
-- [ ] On GitHub, navigate back to the CodesmithLLC version of this repo, click the green `Code` button, and copy the URL in the dropdown.
-- [ ] In your terminal, type `git remote add upstream <CodesmithLLC github URL>`.
-- [ ] Verify that you have aliases for origin and upstream set by typing `git remote -v`. These aliases should look something like this:
+- [X] On GitHub, navigate back to the CodesmithLLC version of this repo, click the green `Code` button, and copy the URL in the dropdown.
+- [X] In your terminal, type `git remote add upstream <CodesmithLLC github URL>`.
+- [X] Verify that you have aliases for origin and upstream set by typing `git remote -v`. These aliases should look something like this:
   ```
   origin    git@github.com:USERNAME/hack-hour-campus-01.git (fetch)
   origin    git@github.com:USERNAME/hack-hour-campus-01.git (push)
   upstream  git@github.com:CodesmithLLC/hack-hour-campus-01.git (fetch)
   upstream  git@github.com:CodesmithLLC/hack-hour-campus-01.git (push)
   ```
-- [ ] Set your configuration for this repo by running `git config pull.rebase false`.
+- [X] Set your configuration for this repo by running `git config pull.rebase false`.
 
 ## How do I get new Hack Hours every day?
 
-- [ ] In your terminal, navigate to your hack hour directory.
-- [ ] Make sure you have added and committed your changes from previous hack hours. (If you're unsure, type `git status` to check!)
-- [ ] Type `git pull upstream main`. This will pull down the latest challenges & solutions.
+- [X] In your terminal, navigate to your hack hour directory.
+- [X] Make sure you have added and committed your changes from previous hack hours. (If you're unsure, type `git status` to check!)
+- [X] Type `git pull upstream main`. This will pull down the latest challenges & solutions.
 
 NOTE: You shouldn't ever need to create additional files. The **only way** new files should be created is by pulling from upstream main.
 
-- [ ] Run `npm install` to install any dependencies
-- [ ] Run `npm test` to start the test runner
+- [X] Run `npm install` to install any dependencies
+- [X] Run `npm test` to start the test runner
 
 ## Testing
 
