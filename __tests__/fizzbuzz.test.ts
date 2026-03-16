@@ -5,8 +5,7 @@ describe('fizzbuzz', () => {
   const arr = fizzbuzz(31);
 
   it('should return an array of length num', () => {
-    expect(arr.length).toBe(31); // how do i make this test work for any num?
-    
+    expect(arr.length).toBe(31);
   });
 
   it('should work for non-multiples of 3 and 5', () => {

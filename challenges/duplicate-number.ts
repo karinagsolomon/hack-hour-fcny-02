@@ -6,6 +6,19 @@
  */
 
 export const duplicateNumber = (array: number[]): number => {
+  /*
+ * You have an unsorted array of n + 1 integers, ranging from 1 to n,
+ * with an extra number that is a duplicate. Find and return that number.
+ * If no duplicates are found, return 0.
+ * ex: [1,5,4,3,6,2,4,7] should return 4
+ */
+  const seen = new Set();
+  for (const num of array) {
+    if (seen.has(num)) {
+      return num;
+    }
+    seen.add(num);
+  }
   return 0;
 };
 
