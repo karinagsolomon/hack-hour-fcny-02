@@ -13,7 +13,15 @@ fizzbuzz(16);
 */
 
 const fizzbuzz = (num: number): (number | string)[] => {
-  return [];
+  const newArr = [];
+  for (let i = 1; i <= num; i++) {
+    let str = "";
+    if (i % 3 === 0) str += "fizz";
+    if (i % 5 === 0) str += "buzz";
+
+    newArr.push(str || i);
+  }
+  return newArr;
 };
 
 /*
@@ -37,7 +45,16 @@ fizzbuzzbazz(25);
 */
 
 const fizzbuzzbazz = (num: number): (number | string)[] => {
-  return [];
+  const newArr = [];
+  for (let i = 1; i <= num; i++) {
+    let str = "";
+    if (i % 3 === 0) str += "fizz";
+    if (i % 5 === 0) str += "buzz";
+    if (i % 7 === 0) str += "bazz";
+
+    newArr.push(str || i);
+  }
+  return newArr;
 };
 
 export { fizzbuzz, fizzbuzzbazz };

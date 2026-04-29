@@ -30,7 +30,33 @@
  */
 
 const permPalin = (str: string): boolean => {
-  return true; // Placeholder return value for type safety - replace for your solution
+  // let forward = [];
+  // let backward = [];
+  // for(let i of str){
+  //   forward.push(str[i]);
+  // }
+  // for(let i=str.length-1; i>=0; i--){
+  //   backward.push(str[i]);
+  // }
+  // if(forward===backward) return true; // Placeholder return value for type safety - replace for your solution
+  // Step 1: Sanitize - convert to lowercase and remove non-alphanumeric
+  const cleanStr = str.toLowerCase().replace(/[^a-z0-9]/g, '');
+
+  // Step 2 & 3: Track characters with odd frequencies
+  // Using a Set: add if not present, remove if already there.
+  // At the end, the Set will only contain characters with odd counts.
+  const oddChars = new Set();
+
+  for (let char of cleanStr) {
+    if (oddChars.has(char)) {
+      oddChars.delete(char);
+    } else {
+      oddChars.add(char);
+    }
+  }
+
+  // Step 4: A palindrome permutation is possible if 0 or 1 char has an odd count
+  return oddChars.size <= 1;
 };
 
 /**
