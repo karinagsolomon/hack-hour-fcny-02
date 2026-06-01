@@ -21,6 +21,17 @@ calculating profit along as you iterate through the array.
 */
 
 const highestProfit = (prices: number[]): number => {
-  return 0;
+  if (prices.length < 2) return 0;
+  
+  let minPrice = prices[0]; // buy pointer
+  let maxProfit = 0;
+  
+  for (let i of prices) {
+    const profit = i - minPrice;
+    maxProfit = Math.max(maxProfit, profit);
+    minPrice = Math.min(minPrice, i);
+  }
+  
+  return maxProfit;
 };
 export default highestProfit;
